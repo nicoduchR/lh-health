@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+
+  div.wrapper.fadeInDown
+    div#formContent
+        div.fadeIn.first
+            img(src="")#id=icon
+        form(method='POST' action='/users/login')
+            input#login.fadeIn.second(type='text', placeholder='E-mail' name='email' required)
+            input#password.fadeIn.third(type='password', placeholder='Mot de passe' name='password' required)
+            input.fadeIn.fourth(type='submit', placeholder='Se connecter' name='Log in')
+            if notCredentials
+              div.alert.alert-danger(role="alert") Email ou mot de passe invalide
+
