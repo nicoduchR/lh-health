@@ -50,11 +50,8 @@ router.post('/login', (req, res, next) => {
 
                         console.log(userObject.access_level.name)
                         res.cookie('jwt', token)
-                        if(userObject.access_level.name == "ADMIN" || userObject.access_level.name == "USER"){
-                            res.redirect('/certify')
-                        }else{
-                            res.redirect('/verify')
-                        }
+                        res.redirect('/dashboard')
+    
                         
                     });
                     

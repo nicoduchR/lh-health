@@ -344,3 +344,9 @@ input[type=text]:placeholder {
     -webkit-transform: rotate(360deg);
   }
 }
+
+
+#myChart {
+  width: 20px;
+  height: 20px;
+}
