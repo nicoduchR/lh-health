@@ -6,7 +6,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: '' });
 });
 
-router.get('/wololo', async function(req, res, next) {
+router.post('/wololo', async function(req, res, next) {
   let body = req.body;
     console.log(body);
     res.setHeader('Content-Type', 'application/json');
